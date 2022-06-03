@@ -15,7 +15,7 @@
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
-        $sql = "CREATE DATABASE my_school";
+        $sql = "CREATE DATABASE corephp";
         if ($conn->query($sql) === TRUE) {
         echo "Your DataBase has create successfully";
         } else {
