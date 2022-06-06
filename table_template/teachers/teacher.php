@@ -1,6 +1,6 @@
 <?php
     include ("../connection_and_db/connection.php");
-    $sql = "SELECT * FROM table_teacher"; 
+    $sql = "SELECT * FROM teachers"; 
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -26,14 +26,14 @@
     <div class="container-fluid">
         <div class="container">
             <div class="m-5 shadow-lg bg-light p-3">
-                <h1 class="text-center text-danger mb-5">Teacher Table</h1>
+                <h1 class="text-center text-danger mb-5">Teacher</h1>
                 <table class="table table-hover table-bordered">
                     <tr>
                         <th>ID</th>
                         <th>Teacher Name</th>
                         <th>Teacher Last Name</th>
                         <th>Phone Number</th>
-                        <th>Class ID</th>
+                        <th>Class Name</th>
                         <th>Action</th>
                     </tr>
                     <?php

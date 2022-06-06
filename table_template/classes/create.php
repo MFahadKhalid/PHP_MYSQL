@@ -34,7 +34,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="shadow-lg bg-light m-5 p-5">
-                <h1 class="text-center text-primary">Fill Class Table</h1>
+                <h1 class="text-center text-primary">Form</h1>
                 <form action="store.php" method="POST">
                     <div class="row">
                         <div class="mt-3 col-md-6">

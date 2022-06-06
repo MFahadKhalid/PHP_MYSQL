@@ -1,6 +1,6 @@
 <?php
     include ("../connection_and_db/connection.php");
-    $sql = "SELECT * FROM clas_table"; 
+    $sql = "SELECT * FROM classes"; 
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="m-5 shadow-lg bg-light p-3">
-                <h1 class="text-center text-danger mb-5">Class Table</h1>
+                <h1 class="text-center text-danger mb-5">Class</h1>
                 <table class="table table-hover table-bordered">
                     <tr>
                         <th>ID</th>

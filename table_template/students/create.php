@@ -1,5 +1,7 @@
 <?php
     include ("../connection_and_db/connection.php");
+    $sql = "SELECT * FROM classes"; 
+    $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +36,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="shadow-lg bg-light m-5 p-5">
-                <h1 class="text-center text-primary">Fill Student Table</h1>
+                <h1 class="text-center text-primary">Form</h1>
                 <form action="store.php" method="POST">
                     <div class="row">
                         <div class="mt-3 col-md-6">
@@ -50,8 +52,18 @@
                             <input type="text" class="form-control" name="phone_no" required>
                         </div>
                         <div class="mt-3 col-md-6">
-                            <label for="class_id">Class ID</label>
-                            <input type="text" class="form-control" name="class_id" required>
+                        <label for="class_id">Class ID</label>
+                            <select class="form-control" name="class_id" required>
+                                <option value="">Please Select</option>
+                                <?php
+                                    if ($result->num_rows > 0){
+                                        while($row = $result->fetch_assoc()){
+                                ?>
+                                    <option value="<?php echo $row['class_name']; ?>"><?php echo $row['class_name']; ?></option>
+                                <?php } ?>
+                                <?php } ?>
+                                
+                            </select>
                         </div>
                         <div class="mt-3 col-md-12">
                             <label for="email">E-mail</label>

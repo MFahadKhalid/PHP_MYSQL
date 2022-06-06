@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2022 at 12:23 AM
+-- Generation Time: Jun 06, 2022 at 01:54 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -18,38 +18,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `my_school`
+-- Database: `corephp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_teacher`
+-- Table structure for table `students`
 --
 
-CREATE TABLE `table_teacher` (
+CREATE TABLE `students` (
   `id` int(6) NOT NULL,
-  `teacher_name` varchar(190) NOT NULL,
-  `teacher_last_name` varchar(255) NOT NULL,
+  `first_name` varchar(190) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
   `phone_no` varchar(50) NOT NULL,
-  `class_id` varchar(50) NOT NULL
+  `class_id` varchar(255) NOT NULL,
+  `email` varchar(190) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `table_teacher`
+-- Dumping data for table `students`
 --
 
-INSERT INTO `table_teacher` (`id`, `teacher_name`, `teacher_last_name`, `phone_no`, `class_id`) VALUES
-(7, 'Qasim', 'Inayat', '034343', '3');
+INSERT INTO `students` (`id`, `first_name`, `last_name`, `phone_no`, `class_id`, `email`) VALUES
+(3, 'Abdul', 'Wahab', '0344-7241705', '2nd year', 'abdulwahab29@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `table_teacher`
+-- Indexes for table `students`
 --
-ALTER TABLE `table_teacher`
+ALTER TABLE `students`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +58,10 @@ ALTER TABLE `table_teacher`
 --
 
 --
--- AUTO_INCREMENT for table `table_teacher`
+-- AUTO_INCREMENT for table `students`
 --
-ALTER TABLE `table_teacher`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `students`
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

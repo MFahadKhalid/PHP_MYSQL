@@ -1,6 +1,6 @@
 <?php
     include ("../connection_and_db/connection.php");
-    $sql = "SELECT * FROM student_table WHERE id = $_GET[id]";
+    $sql = "SELECT * FROM students WHERE id = $_GET[id]";
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="shadow-lg bg-light m-5 p-5">
-                <h1 class="text-center text-primary">Edit Student Table</h1>
+                <h1 class="text-center text-primary">Form</h1>
                 <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()){

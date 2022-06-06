@@ -4,7 +4,7 @@
     $teacher_last_name = $_POST['teacher_last_name'];
     $phone_no = $_POST['phone_no'];
     $class_id = $_POST['class_id'];
-    $sql = "INSERT into table_teacher (teacher_name,teacher_last_name,phone_no,class_id) VALUE ('$teacher_name','$teacher_last_name','$phone_no','$class_id')";
+    $sql = "INSERT into teachers (teacher_name,teacher_last_name,phone_no,class_id) VALUE ('$teacher_name','$teacher_last_name','$phone_no','$class_id')";
     $result = mysqli_query($conn,$sql);
     if ($result) {
         header("location: teacher.php");
